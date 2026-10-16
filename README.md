@@ -67,6 +67,16 @@ remotion.config.ts
 tsconfig.json
 ```
 
+## Production notes for the coding agent
+
+- [Agent instructions](AGENTS.md) — project-specific rules and workflow entry point.
+- [Video workflow](docs/VIDEO_WORKFLOW.md) — brief → treatment → look test → build → review.
+- [Treatment template](docs/TREATMENT_TEMPLATE.md) — reusable planning sheet for each new video.
+- [Style guide](docs/STYLE_GUIDE.md) — consistent layout, typography, motion, audio, and Reels retention principles.
+- [Quality checklist](docs/QUALITY_CHECKLIST.md) — pre-publish content, visual, audio, and technical review.
+
+The production workflow is adapted for this project from [Lemo-Opuscar](https://github.com/lemomo-ai/lemo-opuscar), especially its agent workflow, directing method, and technical quality checks. These documents are rewritten for Remotion; the Lemo-Opuscar rendering engine and demos are not part of this repository.
+
 ## Scripts
 
 - `npm run dev` — launch Remotion Studio
