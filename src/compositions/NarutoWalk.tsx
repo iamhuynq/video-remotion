@@ -33,9 +33,9 @@ export const NarutoWalk: React.FC = () => {
       <Part file="torso.svg" x={cx - 70} y={y + 78} w={140} h={170} rotate={Math.sin(phase) * 2} origin="50% 10%" z={4} />
       <Part file="arm.svg" x={cx - 92} y={y + 93} w={58} h={142} rotate={arm} origin="65% 10%" z={5} />
       <Part file="arm.svg" x={cx + 34} y={y + 93} w={58} h={142} rotate={-arm} origin="35% 10%" z={3} />
-      <Part file="head.svg" x={cx - 80} y={y - 55} w={160} h={160} z={6} />
-      <Part file="headband.svg" x={cx - 90} y={y - 73} w={180} h={90} z={7} />
-      <Part file="hair.svg" x={cx - 90} y={y - 103} w={180} h={100} z={8} />
+      <Part file="head.svg" x={cx - 100} y={y - 62} w={200} h={200} z={6} />
+      <Part file="headband.svg" x={cx - 85} y={y - 52} w={170} h={85} z={7} />
+      <Part file="hair.svg" x={cx - 95} y={y - 112} w={190} h={105} z={8} />
       <div style={{ position: "absolute", top: 110, left: 0, right: 0, textAlign: "center", color: "#24384b" }}>
         <div style={{ fontSize: 54, fontWeight: 800, letterSpacing: 2 }}>NARUTO</div>
         <div style={{ fontSize: 26, marginTop: 12 }}>2D STICKMAN WALK CYCLE</div>
