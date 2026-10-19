@@ -4,6 +4,7 @@ import { RankingVideo, VIDEO_FPS, VIDEO_HEIGHT, VIDEO_WIDTH, VIDEO_DURATION } fr
 import { NarutoWalk } from "./compositions/NarutoWalk";
 
 export const RemotionRoot: React.FC = () => (
+  <>
   <Composition
     id="NarutoRanking"
     component={RankingVideo}
@@ -13,4 +14,5 @@ export const RemotionRoot: React.FC = () => (
     height={VIDEO_HEIGHT}
   />
   <Composition id="NarutoWalk" component={NarutoWalk} durationInFrames={300} fps={30} width={1080} height={1920} />
+  </>
 );
