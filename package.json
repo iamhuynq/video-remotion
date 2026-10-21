@@ -7,7 +7,9 @@
     "dev": "remotion studio src/index.ts",
     "build": "remotion render src/index.ts NarutoRanking out/naruto-ranking.mp4",
     "still": "remotion still src/index.ts NarutoRanking out/preview.png --frame=120",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "build:akatsuki": "remotion render src/index.ts AkatsukiRanking out/akatsuki-ranking.mp4",
+    "still:akatsuki": "remotion still src/index.ts AkatsukiRanking out/akatsuki-preview.png --frame=120"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.0",
