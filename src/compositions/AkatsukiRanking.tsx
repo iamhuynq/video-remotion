@@ -77,8 +77,13 @@ const MemberCard: React.FC<{ member: AkatsukiMember; index: number }> = ({ membe
       <div style={{ position: "absolute", top: 160, left: 0, right: 0, height: 126, overflow: "hidden", opacity: 0.92 }}>
         <div style={{ display: "flex", gap: 16, width: "max-content", transform: `translateX(calc(-${index * 128}px + ${slide}px))` }}>
           {[...akatsukiMembers, ...akatsukiMembers].map((m, i) => (
-            <div key={`${m.name}-${i}`} style={{ width: 110, height: 110, border: `2px solid ${m.name === member.name ? member.accent : "#FFFFFF20"}`, borderRadius: 18, background: m.name === member.name ? `${member.accent}22` : "#FFFFFF08", display: "flex", justifyContent: "center", alignItems: "center", color: m.name === member.name ? member.accent : "#747889", fontSize: 30, fontWeight: 900, transform: m.name === member.name ? "scale(1.06)" : "scale(.9)" }}>
-              {String(m.rank).padStart(2, "0")}
+            <div key={`${m.name}-${i}`} style={{ position: "relative", width: 110, height: 110, flexShrink: 0, overflow: "hidden", border: `2px solid ${m.name === member.name ? member.accent : "#FFFFFF20"}`, borderRadius: 18, background: "#11121A", display: "flex", justifyContent: "center", alignItems: "center", transform: m.name === member.name ? "scale(1.06)" : "scale(.9)", boxShadow: m.name === member.name ? `0 0 22px ${member.accent}55` : "none" }}>
+              {m.image ? (
+                <Img src={staticFile(m.image)} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center" }} />
+              ) : (
+                <div style={{ color: m.accent, fontSize: 34, fontWeight: 900 }}>{m.initials}</div>
+              )}
+              <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, padding: "4px 0", textAlign: "center", background: "linear-gradient(transparent, #05060BEF)", color: "#FFFFFF", fontSize: 17, fontWeight: 900 }}>{String(m.rank).padStart(2, "0")}</div>
             </div>
           ))}
         </div>
